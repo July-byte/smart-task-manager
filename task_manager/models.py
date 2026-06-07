@@ -17,7 +17,7 @@ class Task:
   completed: bool
   created_at: str
 
-  def to_dict(self) _> Dict:
+  def to_dict(self) -> Dict:
   return {
     "id": self.id,
     "title": self.title,
@@ -28,7 +28,7 @@ class Task:
   }
 
 @staticmethod
-def from_dict(data: Dict) _> "Task":
+def from_dict(data: Dict) -> "Task":
   return Task(
     id=data["id"],
     title=data["title"],
